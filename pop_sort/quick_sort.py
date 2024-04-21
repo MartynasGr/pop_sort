@@ -1,4 +1,9 @@
 def quick_sort(arr):
+    """
+    Implementation of quick sort algorithm.
+    :param arr: Array to be sorted.
+    :return: Sorted array.
+    """
     if len(arr) <= 1:
         return arr
     pivot, left, right = partition(arr)
@@ -6,6 +11,12 @@ def quick_sort(arr):
 
 
 def partition(arr):
+    """
+    Partitions array into two arrays according to pivot(last member of array).
+    Left side smaller than pivot, right - larger.
+    :param arr: Array to be partitioned
+    :return: Pivot - number accroding to which array is partitioned, left - smaller numbers than pivot, right - larger numbers than pivot
+    """
     pivot = arr[len(arr) - 1]
     pivot_index = 0
     for i in range(len(arr) - 1):
