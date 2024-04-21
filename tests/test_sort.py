@@ -2,6 +2,7 @@ import pytest
 from pop_sort.selection_sort import selection_sort
 from pop_sort.bubble_sort import bubble_sort
 from pop_sort.insertion_sort import insertion_sort
+from pop_sort.quick_sort import quick_sort
 
 sorted_array_1 = [1, 1, 4, 5, 5, 8, 10, 15, 22, 111]
 sorted_array_2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -25,7 +26,14 @@ def test_bubble_sort(array_fixture):
     assert bubble_sort(array_1) == sorted_array_1
     assert bubble_sort(array_2) == sorted_array_2
 
+
 def test_insertion_sort(array_fixture):
     array_1, array_2 = array_fixture
     assert insertion_sort(array_1) == sorted_array_1
     assert insertion_sort(array_2) == sorted_array_2
+
+
+def test_quick_sort(array_fixture):
+    array_1, array_2 = array_fixture
+    assert quick_sort(array_1) == sorted_array_1
+    assert quick_sort(array_2) == sorted_array_2
