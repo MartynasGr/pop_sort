@@ -3,6 +3,7 @@ from pop_sort.selection_sort import selection_sort
 from pop_sort.bubble_sort import bubble_sort
 from pop_sort.insertion_sort import insertion_sort
 from pop_sort.quick_sort import quick_sort
+from pop_sort.merge_sort import merge_sort
 
 sorted_array_1 = [1, 1, 4, 5, 5, 8, 10, 15, 22, 111]
 sorted_array_2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -37,3 +38,9 @@ def test_quick_sort(array_fixture):
     array_1, array_2 = array_fixture
     assert quick_sort(array_1) == sorted_array_1
     assert quick_sort(array_2) == sorted_array_2
+
+
+def test_merge_sort(array_fixture):
+    array_1, array_2 = array_fixture
+    assert merge_sort(array_1) == sorted_array_1
+    assert merge_sort(array_2) == sorted_array_2
