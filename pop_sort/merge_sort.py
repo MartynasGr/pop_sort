@@ -1,4 +1,8 @@
-def merge_sort(arr):
+from .decorators import reverse_decorator
+
+
+@reverse_decorator
+def merge_sort(arr, **kwargs):
     """
     Implementation of merge sort algorithm
     :param arr: Array to be sorted

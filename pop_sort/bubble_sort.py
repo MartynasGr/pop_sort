@@ -1,4 +1,7 @@
-def bubble_sort(arr):
+from .decorators import reverse_decorator
+
+@reverse_decorator
+def bubble_sort(arr, **kwargs):
     """
     Implementation of bubble sort algorithm
     :param arr: array to be sorted

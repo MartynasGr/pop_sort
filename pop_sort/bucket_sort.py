@@ -1,7 +1,9 @@
 from pop_sort.insertion_sort import insertion_sort
+from .decorators import reverse_decorator
 
 
-def bucket_sort(input_list, num_of_buckets=None):
+@reverse_decorator
+def bucket_sort(input_list, num_of_buckets=None, **kwargs):
     max_value = max(input_list)
     size = max_value // num_of_buckets + 1 if num_of_buckets else max_value / len(input_list) + 1
     num_of_buckets = num_of_buckets if num_of_buckets else len(input_list)

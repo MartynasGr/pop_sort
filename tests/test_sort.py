@@ -8,6 +8,7 @@ from pop_sort.bucket_sort import bucket_sort
 
 sorted_array_1 = [1, 1, 4, 5, 5, 8, 10, 15, 22, 111]
 sorted_array_2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+sorted_reverse_array_1 = [111, 22, 15, 10, 8, 5, 5, 4, 1, 1]
 
 
 @pytest.fixture
@@ -51,3 +52,9 @@ def test_bucket_sort(array_fixture):
     array_1, array_2 = array_fixture
     assert bucket_sort(array_1, num_of_buckets=3) == sorted_array_1
     assert bucket_sort(array_2) == sorted_array_2
+
+
+def test_reverse_decorator(array_fixture):
+    array_1, array_2 = array_fixture
+    assert bucket_sort(array_1, num_of_buckets=3, reverse=True) == sorted_reverse_array_1
+    assert merge_sort(array_2, reverse=True) == array_2

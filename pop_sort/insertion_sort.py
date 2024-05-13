@@ -1,4 +1,8 @@
-def insertion_sort(arr):
+from .decorators import reverse_decorator
+
+
+@reverse_decorator
+def insertion_sort(arr, **kwargs):
     """
     Implementation of insertion sort algorithm
     :param arr: Array to be sorted

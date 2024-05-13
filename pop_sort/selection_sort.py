@@ -1,4 +1,8 @@
-def selection_sort(arr):
+from .decorators import reverse_decorator
+
+
+@reverse_decorator
+def selection_sort(arr, **kwargs):
     """
     Implementation of selection sort algorithm
     :param arr: array to be sorted
