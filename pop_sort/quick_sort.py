@@ -6,6 +6,7 @@ def quick_sort(arr, **kwargs):
     """
     Implementation of quick sort algorithm.
     :param arr: Array to be sorted.
+    :param reverse: True if sorted array should be reversed
     :return: Sorted array.
     """
     if len(arr) <= 1:

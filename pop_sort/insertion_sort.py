@@ -6,6 +6,7 @@ def insertion_sort(arr, **kwargs):
     """
     Implementation of insertion sort algorithm
     :param arr: Array to be sorted
+    :param reverse: True if sorted array should be reversed
     :return: Sorted array
     """
     for i in range(1, len(arr)):
