@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='pop_sort',
-    version='0.1',
+    version='0.2',
     description='Project for exploring popular sorting algorithms.',
     long_description=open('README.md', 'r').read(),
     long_description_content_type="text/markdown",
